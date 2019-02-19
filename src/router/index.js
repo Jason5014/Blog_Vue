@@ -1,20 +1,20 @@
 import App from '../App'
 
-// const home = r => require.ensure([], () => r(require('../page/home/home')), 'home')
+const Home = r => require.ensure([], () => r(require('../page/Home/Home')), 'Home')
 
 export default [
   {
     path: '/',
-    component: App
-    // children: [
-    //   {
-    //     path: '',
-    //     redirect: '/home'
-    //   },
-    //   {
-    //     path: '/home',
-    //     component: home
-    //   }
-    // ]
+    component: App,
+    children: [
+      {
+        path: '',
+        redirect: '/home'
+      },
+      {
+        path: '/home',
+        component: Home
+      }
+    ]
   }
 ]
