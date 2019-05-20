@@ -9,7 +9,7 @@ import Chapter7 from '@/components/Chapter7'
 import Chapter8 from '@/components/Chapter8'
 import Chapter9 from '@/components/Chapter9'
 
-Vue.use(Router)
+const Home = r => require.ensure([], () => r(require('../page/Home/Home')), 'Home')
 
 export default new Router({
   routes: [

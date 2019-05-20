@@ -10,7 +10,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
+@import './style/index.less';
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -18,5 +20,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  font-size: @font-size-md;
 }
 </style>
