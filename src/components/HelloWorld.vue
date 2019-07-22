@@ -1,12 +1,13 @@
 <template>
   <div>
-    <h1>{{mergeText}}</h1>
+    <h1>{{mergeText}} - {{count}}</h1>
     <a-button type="primary" @click="changeText">{{text}}</a-button>
   </div>
 </template>
 
 <script>
 import { Button } from 'ant-design-vue'
+import { mapState } from 'vuex'
 
 export default {
   components: { AButton: Button },
@@ -29,7 +30,10 @@ export default {
   computed: {
     mergeText: function () {
       return this.text + this.otherText
-    }
+    },
+    ...mapState([
+      'count'
+    ])
   }
 }
 </script>
